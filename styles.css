@@ -11,27 +11,27 @@
   --transition-normal: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-slow: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Reiche, luxuriöse Farbpalette (Warm Cream & Deep Executive Emerald) */
-  --bg: #fcfbfa;
-  --bg-gradient: linear-gradient(180deg, #fdfdfd 0%, #f7f5f0 100%);
-  --paper: #ffffff;
-  --text: #1b1c1e;
-  --text-muted: #53565a;
-  --text-faint: #888b90;
-  --line: #e6e4dc;
-  --accent: #11533e; /* Tiefes Smaragdgrün */
-  --accent-rgb: 17, 83, 62;
-  --accent-soft: rgba(17, 83, 62, 0.05);
-  --accent-hover: #0c3e2e;
-  --accent-light: #e5edf9; /* Super soft accent light */
+  /* Cyberpunk Glassmorphic Farbpalette (Obsidian & Electric Teal/Purple) */
+  --bg: #07080a;
+  --bg-gradient: radial-gradient(circle at 50% 0%, #10121a 0%, #050608 100%);
+  --paper: rgba(18, 20, 26, 0.65); /* Milchglas-Karten Basis */
+  --text: #f3f4f6;
+  --text-muted: #9ca3af;
+  --text-faint: #4b5563;
+  --line: rgba(255, 255, 255, 0.08);
+  --accent: #00f2fe; /* Electric Teal */
+  --accent-rgb: 0, 242, 254;
+  --accent-soft: rgba(0, 242, 254, 0.08);
+  --accent-hover: #4facfe;
+  --accent-light: rgba(138, 43, 226, 0.15); /* Soft Cyber-Purple */
   
-  /* Reiches, dreidimensionales Schatten-System (Premium Executive) */
-  --shadow-sm: 0 4px 12px rgba(17, 83, 62, 0.03);
-  --shadow-md: 0 16px 40px rgba(17, 83, 62, 0.05), 0 2px 12px rgba(0, 0, 0, 0.01);
-  --shadow-lg: 0 30px 60px -15px rgba(17, 83, 62, 0.1), 0 4px 20px rgba(0, 0, 0, 0.02);
+  /* Dreidimensionales Schatten-System mit Neon-Glow */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --shadow-lg: 0 30px 60px -15px rgba(0, 0, 0, 0.8), 0 0 50px rgba(0, 242, 254, 0.03);
   
-  --pill-bg: #eae8df;
-  --pill-text: #4e4c44;
+  --pill-bg: rgba(255, 255, 255, 0.06);
+  --pill-text: #00f2fe;
   --border-radius-sm: 8px;
   --border-radius-md: 16px;
   --border-radius-lg: 24px;
@@ -66,7 +66,7 @@ body::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(17, 83, 62, 0.09) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(0, 242, 254, 0.05) 1.5px, transparent 1.5px);
   background-size: 32px 32px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.15) 60%, rgba(0, 0, 0, 0) 100%);
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.15) 60%, rgba(0, 0, 0, 0) 100%);
@@ -99,24 +99,24 @@ ul {
   position: absolute;
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(17, 83, 62, 0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.08) 0%, transparent 70%);
   top: -250px;
   right: -150px;
   z-index: -1;
   pointer-events: none;
-  filter: blur(40px);
+  filter: blur(50px);
 }
 
 .bg-glow-bottom {
   position: absolute;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(17, 83, 62, 0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.06) 0%, transparent 70%);
   bottom: -100px;
   left: -250px;
   z-index: -1;
   pointer-events: none;
-  filter: blur(40px);
+  filter: blur(50px);
 }
 
 /* Custom Scrollbar */
@@ -124,12 +124,12 @@ ul {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #f5f3ee;
+  background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: #c7c5be;
+  background: #181c25;
   border-radius: 5px;
-  border: 2px solid #f5f3ee;
+  border: 2px solid var(--bg);
   transition: var(--transition-fast);
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -141,11 +141,11 @@ ul {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(252, 251, 250, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(7, 8, 10, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid var(--line);
-  box-shadow: 0 4px 30px -10px rgba(17, 83, 62, 0.03);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
   transition: var(--transition-normal);
 }
 
@@ -176,7 +176,7 @@ ul {
   height: 6px;
   border-radius: 50%;
   background-color: var(--accent);
-  box-shadow: 0 0 12px rgba(17, 83, 62, 0.8);
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.8);
 }
 
 .nav-menu {
@@ -318,10 +318,10 @@ h1 {
 
 .skill-pill:hover {
   border-color: var(--accent);
-  background-color: rgba(17, 83, 62, 0.04);
+  background-color: rgba(0, 242, 254, 0.06);
   color: var(--accent);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(17, 83, 62, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 242, 254, 0.15);
 }
 
 .links {
@@ -468,6 +468,8 @@ figcaption {
   margin-top: 48px;
   border-top: 1px solid var(--line);
   background-color: var(--paper);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border-radius: var(--border-radius-md);
   border: 1px solid var(--line);
   box-shadow: var(--shadow-md);
@@ -488,7 +490,7 @@ figcaption {
 }
 
 .facts > div:hover {
-  background-color: rgba(17, 83, 62, 0.02);
+  background-color: rgba(0, 242, 254, 0.02);
 }
 
 .facts dt {
@@ -517,8 +519,10 @@ figcaption {
 
 .areas li {
   background-color: var(--paper);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--line);
-  border-top: 5px solid var(--accent); /* Rich emerald top border */
+  border-top: 3px solid var(--accent);
   border-radius: var(--border-radius-md);
   padding: 44px 32px;
   box-shadow: var(--shadow-md);
@@ -537,7 +541,7 @@ figcaption {
   left: 0;
   right: 0;
   height: 120px;
-  background: linear-gradient(180deg, rgba(17, 83, 62, 0.04) 0%, transparent 100%);
+  background: linear-gradient(180deg, rgba(0, 242, 254, 0.04) 0%, transparent 100%);
   opacity: 0;
   transition: var(--transition-normal);
   pointer-events: none;
@@ -545,8 +549,8 @@ figcaption {
 
 .areas li:hover {
   transform: translateY(-10px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(17, 83, 62, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 242, 254, 0.04), var(--shadow-lg);
+  border-color: rgba(0, 242, 254, 0.35);
 }
 
 .areas li:hover::before {
@@ -557,26 +561,21 @@ figcaption {
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  background-color: rgba(17, 83, 62, 0.05);
+  background-color: rgba(0, 242, 254, 0.05);
   color: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition-normal);
-  border: 1px solid rgba(17, 83, 62, 0.1);
+  border: 1px solid rgba(0, 242, 254, 0.1);
   box-shadow: var(--shadow-sm);
-}
-
-.areas li:hover class: .areas-icon {
-  background-color: var(--accent);
-  color: #ffffff;
 }
 
 .areas li:hover .areas-icon {
   background-color: var(--accent);
-  color: #ffffff;
+  color: #07080a;
   transform: scale(1.1) rotate(6deg);
-  box-shadow: 0 8px 20px rgba(17, 83, 62, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 242, 254, 0.3);
 }
 
 .areas h3 {
@@ -608,7 +607,7 @@ figcaption {
   top: 20px;
   bottom: 20px;
   width: 3px;
-  background: linear-gradient(to bottom, var(--accent) 0%, rgba(17, 83, 62, 0.2) 70%, var(--line) 100%);
+  background: linear-gradient(to bottom, var(--accent) 0%, rgba(138, 43, 226, 0.3) 70%, var(--line) 100%);
   border-radius: 3px;
 }
 
@@ -616,6 +615,8 @@ figcaption {
   display: block;
   position: relative;
   background-color: var(--paper);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--line);
   border-radius: var(--border-radius-md);
   padding: 32px 36px;
@@ -640,20 +641,20 @@ figcaption {
   background-color: var(--bg);
   border: 4px solid var(--accent);
   z-index: 2;
-  box-shadow: 0 0 0 5px var(--paper), 0 0 0 8px rgba(17, 83, 62, 0.12);
+  box-shadow: 0 0 0 5px var(--bg), 0 0 0 8px rgba(0, 242, 254, 0.12);
   transition: var(--transition-normal);
 }
 
 .cv li:hover {
   transform: translateX(10px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(17, 83, 62, 0.35);
+  box-shadow: 0 15px 30px rgba(0, 242, 254, 0.03), var(--shadow-lg);
+  border-color: rgba(0, 242, 254, 0.35);
 }
 
 .cv li:hover::before {
   background-color: var(--accent);
   transform: scale(1.35);
-  box-shadow: 0 0 0 5px var(--paper), 0 0 0 10px rgba(17, 83, 62, 0.2), 0 0 15px rgba(17, 83, 62, 0.5);
+  box-shadow: 0 0 0 5px var(--bg), 0 0 0 10px rgba(0, 242, 254, 0.2), 0 0 15px rgba(0, 242, 254, 0.6);
 }
 
 .cv-item-header {
@@ -670,10 +671,10 @@ figcaption {
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--accent);
-  background-color: rgba(17, 83, 62, 0.05);
+  background-color: rgba(0, 242, 254, 0.05);
   padding: 4px 12px;
   border-radius: 20px;
-  border: 1px solid rgba(17, 83, 62, 0.1);
+  border: 1px solid rgba(0, 242, 254, 0.1);
   order: 2;
 }
 
@@ -704,8 +705,10 @@ figcaption {
 /* ---------- Kontakt CTA Card (Vibrant Panel) ---------- */
 .contact-card {
   background-color: var(--paper);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--line);
-  border-top: 6px solid var(--accent);
+  border-top: 4px solid var(--accent);
   border-radius: var(--border-radius-md);
   padding: 56px 48px;
   box-shadow: var(--shadow-lg);
@@ -721,13 +724,13 @@ figcaption {
   right: -30%;
   width: 360px;
   height: 360px;
-  background: radial-gradient(circle, rgba(17, 83, 62, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .contact-card:hover {
-  box-shadow: 0 40px 80px -20px rgba(17, 83, 62, 0.18), 0 5px 25px rgba(0, 0, 0, 0.02);
-  border-color: rgba(17, 83, 62, 0.4);
+  box-shadow: 0 40px 80px -20px rgba(0, 242, 254, 0.12), 0 5px 25px rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 242, 254, 0.4);
 }
 
 .contact-card p {
@@ -766,28 +769,30 @@ figcaption {
 
 .btn-primary {
   background-color: var(--accent);
-  color: #ffffff !important;
-  box-shadow: 0 8px 24px rgba(17, 83, 62, 0.25);
+  color: #07080a !important;
+  box-shadow: 0 8px 24px rgba(0, 242, 254, 0.25);
 }
 
 .btn-primary:hover {
   background-color: var(--accent-hover);
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(17, 83, 62, 0.35);
+  box-shadow: 0 12px 32px rgba(0, 242, 254, 0.45), 0 0 15px rgba(0, 242, 254, 0.2);
 }
 
 .btn-secondary {
-  background-color: var(--paper);
+  background-color: rgba(255, 255, 255, 0.05);
   color: var(--accent) !important;
-  border-color: rgba(17, 83, 62, 0.25);
+  border-color: rgba(0, 242, 254, 0.25);
   box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(17, 83, 62, 0.04);
+  background-color: rgba(0, 242, 254, 0.08);
   border-color: var(--accent);
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(17, 83, 62, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 242, 254, 0.15);
 }
 
 .email-display {
