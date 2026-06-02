@@ -981,7 +981,11 @@ figcaption {
 
 @media (max-width: 480px) {
   .nav-menu {
-    gap: 16px;
+    gap: 12px;
+  }
+  .nav-menu a {
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
   }
   
   .nav {
