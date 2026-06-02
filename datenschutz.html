@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutz — Hijratullah Haqmal</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fbfbf9'/%3E%3Ctext x='16' y='23' font-family='monospace' font-size='18' font-weight='700' fill='%23155c46' text-anchor='middle'%3Eh%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="bg-glow"></div>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="index.html" class="brand">HH</a>
+      <nav class="nav-menu" aria-label="Navigation">
+        <a href="index.html">Zurück</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap legal">
+    <a class="back" href="index.html">← Startseite</a>
+    <h1>Datenschutz</h1>
+
+    <h2>Verantwortlicher</h2>
+    <p>
+      Bytewerk Studio<br />
+      Inhaber: Hijratullah Haqmal<br />
+      Heinigstraße 13, 67059 Ludwigshafen am Rhein<br />
+      E-Mail: Haqmalh@icloud.com
+    </p>
+
+    <h2>Allgemeines</h2>
+    <p>
+      Diese Website ist eine persönliche Profil-Seite. Sie verwendet <strong>keine Cookies</strong>,
+      kein Tracking und keine Web-Analyse. Schriftarten werden datenschutzkonform lokal geladen
+      oder über datenschutzfreundlich eingebundene Google Fonts bezogen, bei denen keine personenbezogenen
+      IP-Adressen dauerhaft protokolliert werden.
+    </p>
+
+    <h2>Hosting</h2>
+    <p>
+      Die Website wird bei Netlify (Netlify, Inc., USA) gehostet. Beim Aufruf verarbeitet der
+      Hoster technisch notwendige Server-Logdaten (u. a. IP-Adresse, Datum/Uhrzeit, abgerufene
+      Datei, Browsertyp). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse
+      an einem sicheren und stabilen Betrieb).
+    </p>
+
+    <h2>Kontaktaufnahme</h2>
+    <p>
+      Wenn Sie mich per E-Mail kontaktieren, werden Ihre Angaben zur Bearbeitung der
+      Anfrage verarbeitet (Art. 6 Abs. 1 lit. b und f DSGVO) und nicht ohne Ihre Einwilligung
+      weitergegeben.
+    </p>
+
+    <h2>Ihre Rechte</h2>
+    <p>
+      Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
+      Datenübertragbarkeit sowie ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde.
+    </p>
+  </main>
+
+  <!-- Ambient bottom background glow -->
+  <div class="bg-glow-bottom"></div>
+
+  <footer class="wrap footer">
+    <span class="name">Hijratullah Haqmal</span>
+    <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+  </footer>
+
+  <script>
+    // Dynamic header styling on scroll
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        header.style.boxShadow = '0 12px 30px -15px rgba(17, 83, 62, 0.12)';
+      } else {
+        header.style.boxShadow = '0 4px 20px -10px rgba(17, 83, 62, 0.05)';
+      }
+    });
+  </script>
+</body>
+</html>
